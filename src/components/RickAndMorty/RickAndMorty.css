@@ -1,0 +1,28 @@
+.sanchez {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url("https://www.smartworld.it/wp-content/uploads/2019/10/Rick-and-Morty-Stagione-4-1280x720.png");
+}
+
+.personSanchez {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: auto;
+    background: #dce7f5;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 5px;
+}
+ul {
+    text-align: left;
+    width: 50%;
+    margin-left: 20%;
+}
+.personSanchez > img {
+    border: thick double green;
+    margin-bottom: 10px;
+}
