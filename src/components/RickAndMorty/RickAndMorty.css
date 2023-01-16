@@ -17,11 +17,13 @@
     border-radius: 20px;
     margin: 5px;
 }
+
 ul {
     text-align: left;
     width: 50%;
     margin-left: 20%;
 }
+
 .personSanchez > img {
     border: thick double green;
     margin-bottom: 10px;

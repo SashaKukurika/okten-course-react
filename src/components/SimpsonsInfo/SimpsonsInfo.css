@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 .simpsons {
     display: flex;
     flex-direction: column;
@@ -8,6 +9,7 @@
     width: 100%;
     background-image: url("https://www.geeksofdoom.com/GoD/img/2012/04/2012-04-10-the_simpsons_springfield.jpg");
 }
+
 .person {
     width: 50%;
     height: auto;
