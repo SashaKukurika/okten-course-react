@@ -1,5 +1,3 @@
-import {useState} from "react";
-
 const User = ({user,setUserDetails}) => {
 
     const {id, name} = user;
