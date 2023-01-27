@@ -17,10 +17,12 @@
     cursor: pointer;
     border: 2px solid #BFE2FF;
 }
+
 .Todo:hover,
 .Todo:focus {
     color: black;
 }
+
 .Todo:after,
 .Todo:before {
     position: absolute;
@@ -32,9 +34,11 @@
     transition: all 280ms ease-in-out;
     width: 0;
 }
+
 .Todo:before {
     top: -6px;
 }
+
 .Todo:hover:after,
 .Todo:hover:before,
 .Todo:focus:after,
@@ -43,6 +47,6 @@
     left: 0;
 }
 
-.Todo div{
+.Todo div {
     text-align: center;
 }

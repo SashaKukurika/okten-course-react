@@ -5,7 +5,7 @@ const urls = {
     todos: 'todos',
     albums: 'albums',
     comments: 'comments',
-    postsId: ':postsId',
+    postId: ':postId',
     postById: (id) => `/posts/${id}`
 }
 

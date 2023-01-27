@@ -25,13 +25,15 @@
     transition: box-shadow 0.3s, transform 0.3s;
     cursor: pointer;
 }
+
 .Header a:hover,
 .Header a[class= 'active'],
 .Header a:focus {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
     color: #FFF;
 }
+
 .Header a:before {
     content: "";
     position: absolute;
@@ -42,6 +44,7 @@
     background: linear-gradient(-45deg, transparent, rgba(191, 226, 255, 0.3), transparent);
     transition: left 0.7s;
 }
+
 .Header a:hover:before,
 .Header a[class= 'active']:before,
 .Header a:focus:before {

@@ -2,7 +2,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 48.684%;
+    width: 48%;
     margin: 10px;
     text-decoration: none;
     position: relative;
@@ -17,10 +17,12 @@
     cursor: pointer;
     border: 2px solid #BFE2FF;
 }
+
 .Comment:hover,
 .Comment:focus {
     color: black;
 }
+
 .Comment:after,
 .Comment:before {
     position: absolute;
@@ -32,9 +34,11 @@
     transition: all 280ms ease-in-out;
     width: 0;
 }
+
 .Comment:before {
     top: -6px;
 }
+
 .Comment:hover:after,
 .Comment:hover:before,
 .Comment:focus:after,

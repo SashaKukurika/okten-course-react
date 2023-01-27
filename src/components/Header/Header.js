@@ -1,6 +1,7 @@
-import css from './Header.module.css'
-import {urls} from "../../configs";
 import {NavLink} from "react-router-dom";
+
+import {urls} from "../../configs";
+import css from './Header.module.css'
 
 const Header = () => {
     return (

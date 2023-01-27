@@ -1,15 +1,15 @@
-import css from './Comment.module.css'
 import {useNavigate} from "react-router-dom";
 
+import css from './Comment.module.css'
 
 const Comment = ({comment}) => {
 
-    const {id, postId, name, email,body} = comment;
+    const {id, postId, name, email, body} = comment;
 
     const navigate = useNavigate();
-    console.log(postId);
+
     return (
-        <div className={css.Comment} onClick={()=> navigate(postId.toString())}>
+        <div onClick={() => navigate(postId.toString())} className={css.Comment}>
             <div>PostId - {postId}</div>
             <div>id - {id}</div>
             <div>name - {name}</div>
