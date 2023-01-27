@@ -7,7 +7,7 @@ const Todo = ({todo}) => {
             <div>UserId - {userId}</div>
             <div>Id - {id}</div>
             <div>Title - {title}</div>
-            <div>Completed - {completed}</div>
+            <div>Completed - {completed? 'Done' : 'Just do it'}</div>
         </div>
     );
 };

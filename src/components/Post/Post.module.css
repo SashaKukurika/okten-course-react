@@ -1,9 +1,9 @@
-.Album {
+.Post {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 48.684%;
-    margin: 10px;
+    width: 97%;
+    margin: 1%;
     text-decoration: none;
     position: relative;
     font-size: 20px;
@@ -13,18 +13,18 @@
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Roboto Condensed', Тahoma, sans-serif;
-    background: aquamarine;
+    background: cornflowerblue;
     cursor: pointer;
     border: 2px solid #BFE2FF;
 }
 
-.Album:hover,
-.Album:focus {
+.Post:hover,
+.Post:focus {
     color: black;
 }
 
-.Album:after,
-.Album:before {
+.Post:after,
+.Post:before {
     position: absolute;
     height: 4px;
     left: 50%;
@@ -35,14 +35,14 @@
     width: 0;
 }
 
-.Album:before {
+.Post:before {
     top: -6px;
 }
 
-.Album:hover:after,
-.Album:hover:before,
-.Album:focus:after,
-.Album:focus:before {
+.Post:hover:after,
+.Post:hover:before,
+.Post:focus:after,
+.Post:focus:before {
     width: 100%;
     left: 0;
 }

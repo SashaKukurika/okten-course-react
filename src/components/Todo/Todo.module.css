@@ -1,14 +1,48 @@
 .Todo {
     box-sizing: border-box;
-    height: auto;
-    width: 50%;
-    background: rgb(61, 61, 230, 20%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
+    width: 48.684%;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    background: aquamarine;
+    cursor: pointer;
+    border: 2px solid #BFE2FF;
 }
-div {
+.Todo:hover,
+.Todo:focus {
+    color: black;
+}
+.Todo:after,
+.Todo:before {
+    position: absolute;
+    height: 4px;
+    left: 50%;
+    background: black;
+    bottom: -6px;
+    content: "";
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+.Todo:before {
+    top: -6px;
+}
+.Todo:hover:after,
+.Todo:hover:before,
+.Todo:focus:after,
+.Todo:focus:before {
+    width: 100%;
+    left: 0;
+}
+
+.Todo div{
     text-align: center;
 }

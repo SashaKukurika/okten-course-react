@@ -1,0 +1,6 @@
+.Comments {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    height: 500px;
+}

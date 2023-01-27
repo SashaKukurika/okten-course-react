@@ -1,4 +1,4 @@
-.Album {
+.Comment {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     margin: 10px;
     text-decoration: none;
     position: relative;
-    font-size: 20px;
+    font-size: 12px;
     line-height: 20px;
     padding: 12px 30px;
     color: black;
@@ -17,14 +17,12 @@
     cursor: pointer;
     border: 2px solid #BFE2FF;
 }
-
-.Album:hover,
-.Album:focus {
+.Comment:hover,
+.Comment:focus {
     color: black;
 }
-
-.Album:after,
-.Album:before {
+.Comment:after,
+.Comment:before {
     position: absolute;
     height: 4px;
     left: 50%;
@@ -34,19 +32,17 @@
     transition: all 280ms ease-in-out;
     width: 0;
 }
-
-.Album:before {
+.Comment:before {
     top: -6px;
 }
-
-.Album:hover:after,
-.Album:hover:before,
-.Album:focus:after,
-.Album:focus:before {
+.Comment:hover:after,
+.Comment:hover:before,
+.Comment:focus:after,
+.Comment:focus:before {
     width: 100%;
     left: 0;
 }
 
-.Album div{
+.Comment div {
     text-align: center;
 }
