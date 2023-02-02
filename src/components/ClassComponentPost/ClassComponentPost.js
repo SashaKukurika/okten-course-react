@@ -2,19 +2,14 @@ import {Component} from "react";
 
 class ClassComponentPost extends Component{
 
-    constructor(props) {
-        super(props);
-        // const {id, userId, body, title} = props;
-    }
-
     render() {
         return(
             <div>
-                {/*<div>UserId: {userId}</div>*/}
-                {/*<div>PostId: {id}</div>*/}
-                {/*<div>Title: {title}</div>*/}
-                {/*<div>Body: {body}</div>*/}
-                post
+                <div>UserId: {this.props.post.userId}</div>
+                <div>PostId: {this.props.post.id}</div>
+                <div>Title: {this.props.post.title}</div>
+                <div>Body: {this.props.post.body}</div>
+                <hr/>
             </div>
         )
     }

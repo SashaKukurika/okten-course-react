@@ -1,7 +1,7 @@
 import {Component} from "react";
 
-import {postsServices} from "../../services";
 import {ClassComponentPost} from "../ClassComponentPost/ClassComponentPost";
+import {postsServices} from "../../services";
 
 class ClassComponentPosts extends Component {
 
@@ -18,9 +18,8 @@ class ClassComponentPosts extends Component {
         return (
             <div>
                 {this.state.arr.map(post => <ClassComponentPost key={post.id} post={post}/>)}
-                posts
             </div>
-        )
+        );
     }
 
 }

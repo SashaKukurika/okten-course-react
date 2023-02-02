@@ -1,3 +1,3 @@
 export * from './commentsServices';
-export * from './postsServices';
 export * from './axiosServices';
+export * from './postsServices';
