@@ -7,18 +7,17 @@ class ClassComponentPosts extends Component {
 
     constructor(props) {
         super(props);
-        this.state = [];
+        this.state = {arr: []};
     }
 
     componentDidMount() {
-        postsServices.getAll().then(({data}) => this.setState([...data]));
+        postsServices.getAll().then(({data}) => this.setState({arr: [...data]}));
     }
 
     render() {
         return (
             <div>
-                {this.state.map(post => <ClassComponentPost key={post.id} post={post}/>)}
-                {/*{console.log(this.setState)}*/}
+                {this.state.arr.map(post => <ClassComponentPost key={post.id} post={post}/>)}
                 posts
             </div>
         )
