@@ -11,7 +11,7 @@ class ClassComponentPosts extends Component {
     }
 
     componentDidMount() {
-        postsServices.getAll.then(({data}) => this.setState([...data]));
+        postsServices.getAll().then(({data}) => this.setState([...data]));
     }
 
     render() {
