@@ -1,12 +1,13 @@
 import {Component} from "react";
 
 import {postsServices} from "../../services";
+import {ClassComponentPost} from "../ClassComponentPost/ClassComponentPost";
 
 class ClassComponentPosts extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {...[]};
+        this.state = [];
     }
 
     componentDidMount() {
@@ -16,19 +17,9 @@ class ClassComponentPosts extends Component {
     render() {
         return (
             <div>
-                {this.state.map(({post}) => {
-                    const {id, userId, body, title} = post
-                    return (
-                        <div key={id}>
-                            <div>UserId: {userId}</div>
-                            ;
-                            <div>PostId: {id}</div>;
-                            <div>Title: {title}</div>;
-                            <div>Body: {body}</div>;
-                        </div>
-                    )
-
-                })}
+                {this.state.map(post => <ClassComponentPost key={post.id} post={post}/>)}
+                {/*{console.log(this.setState)}*/}
+                posts
             </div>
         )
     }
