@@ -1,9 +1,9 @@
 import {Component} from "react";
 
-class ClassComponentComment extends Component{
+class ClassComponentComment extends Component {
 
     render() {
-        return(
+        return (
             <div>
                 <div>PostId: {this.props.comment.postId}</div>
                 <div>Id: {this.props.comment.id}</div>
