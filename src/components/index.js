@@ -2,3 +2,8 @@ export * from './ClassComponentPosts/ClassComponentPosts';
 export * from './ClassComponentPost/ClassComponentPost';
 export * from './ClassComponentComments/ClassComponentComments';
 export * from './ClassComponentComment/ClassComponentComment';
+export * from './CatsAndDogsForm/CatsAndDogsForm';
+export * from './Cats/Cats';
+export * from './Cat/Cat';
+export * from './Dogs/Dogs';
+export * from './Dog/Dog';

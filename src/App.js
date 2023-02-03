@@ -1,14 +1,12 @@
-import {ClassComponentComments, ClassComponentPosts} from "./components";
-import {CatsForm} from "./components/CatsForm/CatsForm";
-import {Cat} from "./components/Cat/Cat";
+// import {ClassComponentComments, ClassComponentPosts} from "./components";
+import {CatsAndDogsForm} from "./components";
 
 const App = () => {
      return (
         <div>
+            <CatsAndDogsForm/>
             {/*<ClassComponentPosts/>*/}
             {/*<ClassComponentComments/>*/}
-            <CatsForm/>
-            {/*<Cat/>*/}
         </div>
     );
 };

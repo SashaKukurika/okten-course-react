@@ -1,10 +1,10 @@
 const Cat = ({cat, dispatch}) => {
-    const {id, catName} = cat;
+    const {idCat, catName} = cat;
 
     return (
         <div>
-            {id} - {catName}
-            <button onClick={()=> dispatch({type: 'deleteCat', payload: id})}>Delete</button>
+            {idCat} - {catName}
+            <button onClick={()=> dispatch({type: 'deleteCat', payload: idCat})}>Delete</button>
         </div>
     );
 };
