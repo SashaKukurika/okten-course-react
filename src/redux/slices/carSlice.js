@@ -36,11 +36,8 @@ const updateById = createAsyncThunk(
     'carSlice/updateById',
     async ({id, car}, thunkAPI) => {
         try {
-            console.log(id);
-            console.log(car);
             await carsService.updateById(id, car);
             thunkAPI.dispatch(getAll())
-            console.log(initialState.carUpdate);
         } catch (e) {
             return thunkAPI.rejectWithValue(e.errors.data);
         }
@@ -71,6 +68,9 @@ const carSlice = createSlice({
         builder
             .addCase(getAll.fulfilled, (state, action) => {
                 state.cars = action.payload;
+            })
+            .addCase(updateById.fulfilled, (state) => {
+                state.carUpdate = null;
             })
 });
 

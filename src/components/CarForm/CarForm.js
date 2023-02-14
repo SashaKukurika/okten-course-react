@@ -1,10 +1,10 @@
 import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
 
 import {carAction} from "../../redux/slices";
 import {carValidator} from "../../validators";
-import {useEffect} from "react";
 
 const CarForm = () => {
 
@@ -30,14 +30,9 @@ const CarForm = () => {
     };
 
     const update = (car) => {
-        console.log(carUpdate)
         dispatch(carAction.updateById({id: carUpdate.id, car}));
         reset();
-        // Як зробити щоб carUpdate змінився знову на null після апдейту даних кара?
-        // тому що після апдейту кнопка залишається з назвою update,
-        // адже carUpdate уже існує, а щоб повернути на назву create потрібно щоб carUpdate
-        // був фолсового значення.
-        // пробував різні варіанти та підходи але не виходить
+
     };
 
     return (
