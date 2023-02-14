@@ -36,25 +36,39 @@
 // }
 
 
-interface Cores {
-    [index: number]: {
-        flight: number,
-        core: {
-            reuse_count: number,
-            status: string
-        }
-    };
+// interface Cores {
+//     [index: number]: {
+//         flight: number,
+//         core: {
+//             reuse_count: number,
+//             status: string
+//         }
+//     };
+// }
+
+interface Cores2 {
+    flight: number,
+    core: {
+        reuse_count: number,
+        status: string
+    }
 }
 
-interface Payloads {
-    [index: number]: {
-        payload_type: string,
-        payload_mass_kg: number,
-        payload_mass_lbs: number,
-    };
+// interface Payloads {
+//     [index: number]: {
+//         payload_type: string,
+//         payload_mass_kg: number,
+//         payload_mass_lbs: number,
+//     };
+// }
+
+interface Payloads2 {
+    payload_type: string,
+    payload_mass_kg: number,
+    payload_mass_lbs: number
 }
 
-interface IUser {
+interface ISpaceX {
     mission_name: string,
     launch_date_local: string,
     launch_site: {
@@ -67,15 +81,15 @@ interface IUser {
     rocket: {
         rocket_name: string,
         first_stage: {
-            cores: Cores;
+            cores: Cores2[];
         },
         second_stage: {
-            payloads: Payloads;
+            payloads: Payloads2[];
         }
     }
 }
 
-const user2: IUser = {
+const user2: ISpaceX = {
     mission_name: "Starlink-15 (v1.0)",
     launch_date_local: "2020-10-24T11:31:00-04:00",
     launch_site: {
@@ -106,7 +120,7 @@ const user2: IUser = {
                 {
                     payload_mass_kg: 15400,
                     payload_mass_lbs: 33951.2,
-                    payload_type: 'Satellite'
+                    payload_type: "Satellite"
                 },
                 {
                     payload_mass_kg: 34,
@@ -123,7 +137,13 @@ console.log(user2);
 // ---------------------------------------------------------------------------—————————
 // 2) протипізувати функції:
 
-const user = {
+interface IUser {
+    name: string;
+    age: number;
+    gender: string;
+}
+
+const user: IUser = {
     name: "Max",
     age: 18,
     gender: 'male'
@@ -137,7 +157,7 @@ function showSum(a: number, b: number): void {
     console.log(a + b);
 }
 
-function incAge(someUser: { name: string, age: number, gender: string }, inc: number): object {
+function incAge(someUser: IUser, inc: number): IUser {
     someUser.age += inc;
     return someUser
 }
