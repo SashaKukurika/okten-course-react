@@ -4,15 +4,17 @@ import {carsService} from "../../services";
 
 const initialState = {
     cars: [],
+    prev: null,
+    next: null,
     carUpdate: null,
     errors: null
 }
 
 const getAll = createAsyncThunk(
     'carSlice/getAll',
-    async (_, thunkAPI) => {
+    async ({page}, thunkAPI) => {
         try {
-            const {data} = await carsService.getAll();
+            const {data} = await carsService.getAll(page);
             return data;
         } catch (e) {
             return thunkAPI.rejectWithValue(e.errors.data);
@@ -25,7 +27,7 @@ const create = createAsyncThunk(
     async (arg, thunkAPI) => {
         try {
             await carsService.create(arg);
-            thunkAPI.dispatch(getAll());
+            thunkAPI.dispatch(getAll({page: 1}));
         } catch (e) {
             return thunkAPI.rejectWithValue(e.errors.data);
         }
@@ -36,11 +38,9 @@ const updateById = createAsyncThunk(
     'carSlice/updateById',
     async ({id, car}, thunkAPI) => {
         try {
-            console.log(id);
-            console.log(car);
             await carsService.updateById(id, car);
             thunkAPI.dispatch(getAll())
-            console.log(initialState.carUpdate);
+
         } catch (e) {
             return thunkAPI.rejectWithValue(e.errors.data);
         }
@@ -70,7 +70,13 @@ const carSlice = createSlice({
     extraReducers: builder =>
         builder
             .addCase(getAll.fulfilled, (state, action) => {
-                state.cars = action.payload;
+                const {prev,next,items} = action.payload;
+                state.cars = items;
+                state.prev = prev;
+                state.next = next;
+            })
+            .addCase(updateById.fulfilled, (state) => {
+                state.carUpdate = null;
             })
 });
 
