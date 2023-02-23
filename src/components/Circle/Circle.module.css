@@ -1,0 +1,7 @@
+.Circle {
+    border-radius: 50%;
+    border: 10px silod var(--border-color);
+    height: 300px;
+    width: 300px;
+    background: var(--border-color);
+}
